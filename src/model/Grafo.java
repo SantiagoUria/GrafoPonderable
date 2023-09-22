@@ -3,9 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.PriorityQueue;
 import java.util.Set;
-import java.util.TreeMap;
 
 public class Grafo {
 
@@ -50,19 +48,18 @@ public class Grafo {
 			Arista aristaMinima = null;
 
 			for (int vActual : vVisitados) {
-                Set<Arista> vecinos = listaDeVecinos.get(vActual);
+				Set<Arista> vecinos = listaDeVecinos.get(vActual);
 				for (Arista arista : vecinos) {
 					if (!vVisitados.contains(vertices.indexOf(arista.getDestino())) && arista.getPeso() < pesoMinimo) {
-                        pesoMinimo = arista.getPeso();
-                        aristaMinima = arista;
-                    }
-
+						pesoMinimo = arista.getPeso();
+						aristaMinima = arista;
+					}
 				}
 			}
-            if (aristaMinima != null) {
-                agm.add(aristaMinima);
-                vVisitados.add(vertices.indexOf(aristaMinima.getDestino()));
-            }
+			if (aristaMinima != null) {
+				agm.add(aristaMinima);
+				vVisitados.add(vertices.indexOf(aristaMinima.getDestino()));
+			}
 		}
 		return agm;
 	}

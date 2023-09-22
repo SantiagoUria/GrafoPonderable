@@ -14,11 +14,11 @@ public class ArbolGeneradorMinimo {
 	public void add(Arista arista) {
 		aristas.add(arista);
 	}
-	
+
 	public Arista aristaMasPesada() {
 		Arista pesada = null;
-		for(Arista arista : aristas) {
-			if(pesada==null || arista.getPeso()>pesada.getPeso()) {
+		for (Arista arista : aristas) {
+			if (pesada == null || arista.getPeso() > pesada.getPeso()) {
 				pesada = arista;
 			}
 		}
