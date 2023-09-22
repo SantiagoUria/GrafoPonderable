@@ -14,6 +14,11 @@ public class ArbolGeneradorMinimo {
 	public void add(Arista arista) {
 		aristas.add(arista);
 	}
+	
+	public void eliminarAristaMasPesada() {
+		Arista target = aristaMasPesada();
+		aristas.remove(target);
+	}
 
 	public Arista aristaMasPesada() {
 		Arista pesada = null;

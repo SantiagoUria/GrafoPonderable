@@ -23,9 +23,9 @@ class Main {
 
 		System.out.println(agm.toString());
 
-		Arista pesada = agm.aristaMasPesada();
+		agm.eliminarAristaMasPesada();
 
-		System.out.println("arista más pesada:\n" + pesada.toString());
+		System.out.println(agm.toString());		
 
 	}
 }
