@@ -49,7 +49,7 @@ public class Grafo {
 			for (Arista vecino : target) {
 				System.out.print(" (" + vecino.getOrigen().getNombre() +
 						" ——> " + vecino.getDestino().getNombre()
-						+ " : " + vecino.getPeso() + ") ");
+						+ " | peso: " + vecino.getPeso() + ") ");
 			}
 
 			System.out.println();
