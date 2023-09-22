@@ -1,20 +1,23 @@
 package model;
 
 public class Persona {
+	
 	private String nombre;
-	private int deportes, musica, espectaculo, ciencia; // deportes, música, espectáculo, ciencia
+	private int deportes, musica, espectaculo, ciencia;
 
-	Persona(String nombre, int di, int mi, int ei, int ci) {
+	Persona(String nombre, int deportes, int musica, int espectaculo, int ciencia) {
 		this.nombre = nombre;
-		this.deportes = di;
-		this.musica = mi;
-		this.espectaculo = ei;
-		this.ciencia = ci;
+		this.deportes = deportes;
+		this.musica = musica;
+		this.espectaculo = espectaculo;
+		this.ciencia = ciencia;
 	}
 
 	public int similaridad(Persona p) {
-		return Math.abs(this.deportes - p.deportes) + Math.abs(this.musica - p.musica)
-				+ Math.abs(this.espectaculo - p.espectaculo) + Math.abs(this.ciencia - p.ciencia);
+		return Math.abs(this.deportes - p.deportes)
+				+ Math.abs(this.musica - p.musica)
+				+ Math.abs(this.espectaculo - p.espectaculo)
+				+ Math.abs(this.ciencia - p.ciencia);
 	}
 
 	public String getNombre() {

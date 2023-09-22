@@ -21,4 +21,12 @@ public class Arista {
 	public int getPeso() {
 		return peso;
 	}
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(origen.getNombre()).append(" - ");
+		sb.append(destino.getNombre());
+		sb.append(" ").append(peso).append("\n");
+		return sb.toString();
+	}
 }
